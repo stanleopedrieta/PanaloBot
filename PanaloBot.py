@@ -24,7 +24,7 @@ root.configure(bg='black')
 
 mainuser = ""
 only20ptable = False
-mainframe = Frame(root, background="black")
+mainframe = Frame(root, background="#0f0f0f")
 secondframe = Frame(root)
 thirdframe = Frame(root)
 fourthframe = Frame(root)
@@ -49,43 +49,43 @@ startimage = PhotoImage(file=".\\assets\\start.png")
 stopimage = PhotoImage(file=".\\assets\\stop.png")
 logo = PhotoImage(file=".\\assets\\roulette.png")
 icon = PhotoImage(file=".\\assets\\icon.png")
-num0image = PhotoImage(file='.\\assets\\0.png')
-num1image = PhotoImage(file='.\\assets\\1.png')
-num2image = PhotoImage(file='.\\assets\\2.png')
-num3image = PhotoImage(file='.\\assets\\3.png')
-num4image = PhotoImage(file='.\\assets\\4.png')
-num5image = PhotoImage(file='.\\assets\\5.png')
-num6image = PhotoImage(file='.\\assets\\6.png')
-num7image = PhotoImage(file='.\\assets\\7.png')
-num8image = PhotoImage(file='.\\assets\\8.png')
-num9image = PhotoImage(file='.\\assets\\9.png')
-num10image = PhotoImage(file='.\\assets\\10.png')
-num11image = PhotoImage(file='.\\assets\\11.png')
-num12image = PhotoImage(file='.\\assets\\12.png')
-num13image = PhotoImage(file='.\\assets\\13.png')
-num14image = PhotoImage(file='.\\assets\\14.png')
-num15image = PhotoImage(file='.\\assets\\15.png')
-num16image = PhotoImage(file='.\\assets\\16.png')
-num17image = PhotoImage(file='.\\assets\\17.png')
-num18image = PhotoImage(file='.\\assets\\18.png')
-num19image = PhotoImage(file='.\\assets\\19.png')
-num20image = PhotoImage(file='.\\assets\\20.png')
-num21image = PhotoImage(file='.\\assets\\21.png')
-num22image = PhotoImage(file='.\\assets\\22.png')
-num23image = PhotoImage(file='.\\assets\\23.png')
-num24image = PhotoImage(file='.\\assets\\24.png')
-num25image = PhotoImage(file='.\\assets\\25.png')
-num26image = PhotoImage(file='.\\assets\\26.png')
-num27image = PhotoImage(file='.\\assets\\27.png')
-num28image = PhotoImage(file='.\\assets\\28.png')
-num29image = PhotoImage(file='.\\assets\\29.png')
-num30image = PhotoImage(file='.\\assets\\30.png')
-num31image = PhotoImage(file='.\\assets\\31.png')
-num32image = PhotoImage(file='.\\assets\\32.png')
-num33image = PhotoImage(file='.\\assets\\33.png')
-num34image = PhotoImage(file='.\\assets\\34.png')
-num35image = PhotoImage(file='.\\assets\\35.png')
-num36image = PhotoImage(file='.\\assets\\36.png')
+num0image = PhotoImage(file=".\\assets\\0.png")
+num1image = PhotoImage(file=".\\assets\\1.png")
+num2image = PhotoImage(file=".\\assets\\2.png")
+num3image = PhotoImage(file=".\\assets\\3.png")
+num4image = PhotoImage(file=".\\assets\\4.png")
+num5image = PhotoImage(file=".\\assets\\5.png")
+num6image = PhotoImage(file=".\\assets\\6.png")
+num7image = PhotoImage(file=".\\assets\\7.png")
+num8image = PhotoImage(file=".\\assets\\8.png")
+num9image = PhotoImage(file=".\\assets\\9.png")
+num10image = PhotoImage(file=".\\assets\\10.png")
+num11image = PhotoImage(file=".\\assets\\11.png")
+num12image = PhotoImage(file=".\\assets\\12.png")
+num13image = PhotoImage(file=".\\assets\\13.png")
+num14image = PhotoImage(file=".\\assets\\14.png")
+num15image = PhotoImage(file=".\\assets\\15.png")
+num16image = PhotoImage(file=".\\assets\\16.png")
+num17image = PhotoImage(file=".\\assets\\17.png")
+num18image = PhotoImage(file=".\\assets\\18.png")
+num19image = PhotoImage(file=".\\assets\\19.png")
+num20image = PhotoImage(file=".\\assets\\20.png")
+num21image = PhotoImage(file=".\\assets\\21.png")
+num22image = PhotoImage(file=".\\assets\\22.png")
+num23image = PhotoImage(file=".\\assets\\23.png")
+num24image = PhotoImage(file=".\\assets\\24.png")
+num25image = PhotoImage(file=".\\assets\\25.png")
+num26image = PhotoImage(file=".\\assets\\26.png")
+num27image = PhotoImage(file=".\\assets\\27.png")
+num28image = PhotoImage(file=".\\assets\\28.png")
+num29image = PhotoImage(file=".\\assets\\29.png")
+num30image = PhotoImage(file=".\\assets\\30.png")
+num31image = PhotoImage(file=".\\assets\\31.png")
+num32image = PhotoImage(file=".\\assets\\32.png")
+num33image = PhotoImage(file=".\\assets\\33.png")
+num34image = PhotoImage(file=".\\assets\\34.png")
+num35image = PhotoImage(file=".\\assets\\35.png")
+num36image = PhotoImage(file=".\\assets\\36.png")
 
 
 GWL_EXSTYLE=-20
@@ -263,7 +263,7 @@ def game():
     gameframe = Frame(root)
     gameframe.pack()
 
-    canvas = Canvas(gameframe, width=WIDTH, height=HEIGHT, highlightthickness=1, highlightbackground="black")
+    canvas = Canvas(gameframe, width=WIDTH, height=HEIGHT, highlightthickness=1, highlightbackground="#0f0f0f")
     canvas.pack()
 
     img = ImageTk.PhotoImage(file=".\\assets\\bg6.png")
@@ -285,7 +285,6 @@ def game():
         available_label["text"] = "Please wait for program to exit"
         #available_label["text"] = "Por favor, aguarde o programa sair"
         toexit = True
-        driver.close()
         available_label["text"] = ""
 
     stopbutton = Button(gameframe, command=ending, image=stopimage, state="normal", bg="#ea5324",
@@ -303,7 +302,7 @@ def game():
     close_label["state"] = "disabled"
     global available_label
 
-    available_label = Label(gameframe, text="", font=("Sansation", 11), fg="white", bg="black")
+    available_label = Label(gameframe, text="", font=("Sansation", 11), fg="white", bg="#0f0f0f")
     available_label_window = canvas.create_window(190, 370, window=available_label)
 
     global min_limit, max_limit, minset_money, maxset_money
@@ -315,7 +314,7 @@ def game():
     maxset_moneyl_window = canvas.create_window(240, 242, window=maxset_money, anchor=W)
 
     global status_label
-    status_label = Label(gameframe, text="", fg="white", bg="black", font=("Sensation", 10))
+    status_label = Label(gameframe, text="", fg="white", bg="#0f0f0f", font=("Sensation", 10))
     status_label_window = canvas.create_window(190, 515, window=status_label)
 
     if coldozwait_variable.get() == "-":
@@ -431,7 +430,7 @@ def starting():
     except:
         pass
     if toexit:
-        driver.quit()
+        driver.close()
         stopbutton["state"] = "disabled"
         backbutton["state"] = "normal"
         close_label["state"] = "normal"
@@ -453,7 +452,7 @@ def starting():
     while True:
         whattodo = starting2()
         if whattodo == 'exit':
-            driver.quit()
+            driver.close()
             stopbutton["state"] = "disabled"
             backbutton["state"] = "normal"
             close_label["state"] = "normal"
@@ -470,7 +469,7 @@ def starting():
             starting()
         elif whattodo == "table close":
             if toexit:
-                driver.quit()
+                driver.close()
                 stopbutton["state"] = "disabled"
                 backbutton["state"] = "normal"
                 close_label["state"] = "normal"
@@ -1342,92 +1341,92 @@ def betting():
 
         if num == 0:
             goback = True
-            if redcount >= out_wait:
+            if out_wait <= redcount < (out_wait + martingale_count):
                 redcount += 1
                 goback = False
             else:
                 redcount = 0
-            if blackcount >= out_wait:
+            if out_wait <= blackcount < (out_wait + martingale_count):
                 blackcount += 1
                 goback = False
             else:
                 blackcount = 0
-            if smallcount >= out_wait:
+            if out_wait <= smallcount < (out_wait + martingale_count):
                 smallcount += 1
                 goback = False
             else:
                 smallcount = 0
-            if bigcount >= out_wait:
+            if out_wait <= bigcount < (out_wait + martingale_count):
                 bigcount += 1
                 goback = False
             else:
                 bigcount = 0
-            if oddcount >= out_wait:
+            if out_wait <= oddcount < (out_wait + martingale_count):
                 oddcount += 1
                 goback = False
             else:
                 oddcount = 0
-            if evencount >= out_wait:
+            if out_wait <= evencount < (out_wait + martingale_count):
                 evencount += 1
                 goback = False
             else:
                 evencount = 0
-            if firstdozcount >= col_wait:
+            if col_wait <= firstdozcount < (col_wait + martingale_count):
                 firstdozcount += 1
                 goback = False
             else:
                 firstdozcount = 0
-            if seconddozcount >= col_wait:
+            if col_wait <= seconddozcount < (col_wait + martingale_count):
                 seconddozcount += 1
                 goback = False
             else:
                 seconddozcount = 0
-            if thirddozcount >= col_wait:
+            if col_wait <= thirddozcount < (col_wait + martingale_count):
                 thirddozcount += 1
                 goback = False
             else:
                 thirddozcount = 0
-            if firstcolcount >= col_wait:
+            if col_wait <= firstcolcount < (col_wait + martingale_count):
                 firstcolcount += 1
                 goback = False
             else:
                 firstcolcount = 0
-            if secondcolcount >= col_wait:
+            if col_wait <= secondcolcount < (col_wait + martingale_count):
                 secondcolcount += 1
                 goback = False
             else:
                 secondcolcount = 0
-            if thirdcolcount >= col_wait:
+            if col_wait <= thirdcolcount < (col_wait + martingale_count):
                 thirdcolcount += 1
                 goback = False
             else:
                 thirdcolcount = 0
-            if smallbigcount >= alt_wait:
+            if alt_wait <= smallbigcount < (alt_wait + martingale_count):
                 smallbigcount += 1
                 goback = False
             else:
                 smallbigcount = 0
-            if bigsmallcount >= alt_wait:
+            if alt_wait <= bigsmallcount < (alt_wait + martingale_count):
                 bigsmallcount += 1
                 goback = False
             else:
                 bigsmallcount = 0
-            if oddevencount >= alt_wait:
+            if alt_wait <= oddevencount < (alt_wait + martingale_count):
                 oddevencount += 1
                 goback = False
             else:
                 oddevencount = 0
-            if evenoddcount >= alt_wait:
+            if alt_wait <= evenoddcount < (alt_wait + martingale_count):
                 evenoddcount += 1
                 goback = False
             else:
                 evenoddcount = 0
-            if blackredcount >= alt_wait:
+            if alt_wait <= blackredcount < (alt_wait + martingale_count):
                 blackredcount += 1
                 goback = False
             else:
                 blackredcount = 0
-            if redblackcount >= alt_wait:
+            if alt_wait <= redblackcount < (alt_wait + martingale_count):
                 redblackcount += 1
                 goback = False
             else:
@@ -1643,7 +1642,7 @@ def betting():
                     q.click()
                 except:
                     pass
-                time.sleep(.2)
+                time.sleep(.1)
                 selected_chip = q.get_attribute("data-automation-locator")
                 if selected_chip[15:] == "20":
                     break
@@ -1653,7 +1652,7 @@ def betting():
                     q.click()
                 except:
                     pass
-                time.sleep(.2)
+                time.sleep(.1)
                 selected_chip = q.get_attribute("data-automation-locator")
                 if selected_chip[15:] == "50":
                     break
@@ -1664,7 +1663,7 @@ def betting():
                     q.click()
                 except:
                     pass
-                time.sleep(.2)
+                time.sleep(.1)
                 selected_chip = q.get_attribute("data-automation-locator")
                 if selected_chip[15:] == "100":
                     break
@@ -1674,7 +1673,7 @@ def betting():
                     q.click()
                 except:
                     pass
-                time.sleep(.2)
+                time.sleep(.1)
                 selected_chip = q.get_attribute("data-automation-locator")
                 if selected_chip[15:] == "50":
                     break
@@ -1685,15 +1684,10 @@ def betting():
                     q.click()
                 except:
                     pass
-                time.sleep(.2)
+                time.sleep(.1)
                 selected_chip = q.get_attribute("data-automation-locator")
                 if selected_chip[15:] == "100":
                     break
-        elif chip == "1":
-            try:
-                driver.find_element(By.XPATH, f'//*[@data-automation-locator="chipsPanel.chip100"]').click()
-            except:
-                pass
         else:
             temp_chip = str(int(float(chip) * 100))
             for q in chip_elements:
@@ -1701,12 +1695,12 @@ def betting():
                     q.click()
                 except:
                     pass
-                time.sleep(.2)
+                time.sleep(.1)
                 selected_chip = q.get_attribute("data-automation-locator")
                 if selected_chip[15:] == temp_chip:
                     break
 
-        chip_elements = driver.find_elements(By.XPATH, '//*[@class="arrow-slider__scrollable-content"]/*[name()="svg"]')
+
         rf_count = 1000
         while True:
             if toexit:
@@ -1788,7 +1782,6 @@ def betting():
                                            '//*[@class="roulette-table-cell roulette-table-cell_side-middle-column roulette-table-cell_group-dozen"]')
                 col3 = driver.find_element(By.XPATH,
                                            '//*[@class="roulette-table-cell roulette-table-cell_side-top-column roulette-table-cell_group-dozen"]')
-                global beton0
                 beton0 = driver.find_element(By.XPATH,
                                              '(//*[@class="roulette-table-cell roulette-table-cell_straight-0 roulette-table-cell_group-straight roulette-table-cell_color-green"])[2]')
                 break
@@ -2027,7 +2020,7 @@ def betting():
                         q.click()
                     except:
                         pass
-                    time.sleep(.2)
+                    time.sleep(.1)
                     selected_chip = q.get_attribute("data-automation-locator")
                     if selected_chip[15:] == "20":
                         break
@@ -2037,7 +2030,7 @@ def betting():
                         q.click()
                     except:
                         pass
-                    time.sleep(.2)
+                    time.sleep(.1)
                     selected_chip = q.get_attribute("data-automation-locator")
                     if selected_chip[15:] == "50":
                         break
@@ -2048,7 +2041,7 @@ def betting():
                         q.click()
                     except:
                         pass
-                    time.sleep(.2)
+                    time.sleep(.1)
                     selected_chip = q.get_attribute("data-automation-locator")
                     if selected_chip[15:] == "100":
                         break
@@ -2058,7 +2051,7 @@ def betting():
                         q.click()
                     except:
                         pass
-                    time.sleep(.2)
+                    time.sleep(.1)
                     selected_chip = q.get_attribute("data-automation-locator")
                     if selected_chip[15:] == "50":
                         break
@@ -2069,15 +2062,10 @@ def betting():
                         q.click()
                     except:
                         pass
-                    time.sleep(.2)
+                    time.sleep(.1)
                     selected_chip = q.get_attribute("data-automation-locator")
                     if selected_chip[15:] == "100":
                         break
-            elif bet0_variable.get() == "1":
-                try:
-                    driver.find_element(By.XPATH, f'//*[@data-automation-locator="chipsPanel.chip100"]').click()
-                except:
-                    pass
             else:
                 temp_chip = str(int(float(bet0_variable.get()) * 100))
                 for q in chip_elements:
@@ -2085,7 +2073,7 @@ def betting():
                         q.click()
                     except:
                         pass
-                    time.sleep(.2)
+                    time.sleep(.1)
                     selected_chip = q.get_attribute("data-automation-locator")
                     if selected_chip[15:] == temp_chip:
                         break
@@ -2182,17 +2170,17 @@ def fifthwindow():
 
     fifthframe = Frame(root)
     fifthframe.pack()
-    canvas = Canvas(fifthframe, width=WIDTH, height=HEIGHT, highlightthickness=1, highlightbackground="black")
+    canvas = Canvas(fifthframe, width=WIDTH, height=HEIGHT, highlightthickness=1, highlightbackground="#0f0f0f")
     canvas.pack()
 
     img = ImageTk.PhotoImage(file=".\\assets\\bg5.png")
     canvas.background = img  # Keep a reference in case this code is put in a function.
     bg = canvas.create_image(0, 0, anchor=NW, image=img)
 
-    logo_label = Label(fifthframe, image=casinoimage, bg="black", bd=0)
+    logo_label = Label(fifthframe, image=casinoimage, bg="#0f0f0f", bd=0)
     logo_label_window = canvas.create_window(150, 150, window=logo_label)
 
-    title_label = Label(fifthframe, text="Login", font=("Sansation", 23, "bold"), bg="black", bd=0,
+    title_label = Label(fifthframe, text="Login", font=("Sansation", 23, "bold"), bg="#0f0f0f", bd=0,
                         fg="white")
     title_label_window = canvas.create_window(230, 150, window=title_label)
 
@@ -2206,13 +2194,13 @@ def fifthwindow():
 
     global username_entry, password_entry
 
-    username_entry = Entry(fifthframe, width=14, bd=1, background="black", font=("Sansation", 12), fg="white",
+    username_entry = Entry(fifthframe, width=14, bd=1, background="#0f0f0f", font=("Sansation", 12), fg="white",
                            insertbackground="white")
     username_entry_window = canvas.create_window(215, 229, window=username_entry)
 
     username_entry.insert(END, user)
 
-    password_entry = Entry(fifthframe, show='*', width=14, bd=1, background="black", font=("Sansation", 12),
+    password_entry = Entry(fifthframe, show='*', width=14, bd=1, background="#0f0f0f", font=("Sansation", 12),
                            fg="white", insertbackground="white")
     password_entry_window = canvas.create_window(215, 285, window=password_entry)
 
@@ -2228,16 +2216,16 @@ def fifthwindow():
             start()
 
 
-    toback = Button(fifthframe, text="Login", command=fourthwindow, borderwidth=0, image=backimage, bg="black",
-                    activebackground="black")
+    toback = Button(fifthframe, text="Login", command=fourthwindow, borderwidth=0, image=backimage, bg="#0f0f0f",
+                    activebackground="#0f0f0f")
     toback_window = canvas.create_window(100, 370, window=toback)
-    toadvance = Button(fifthframe, command=checking, image=startimage, borderwidth=0, bg="black",
-                       activebackground="black")
+    toadvance = Button(fifthframe, command=checking, image=startimage, borderwidth=0, bg="#0f0f0f",
+                       activebackground="#0f0f0f")
     toadvance_window = canvas.create_window(280, 370, window=toadvance)
 
     global stat3
     stat3 = Label(fifthframe, text="", font=("Sansation", 10),
-                  fg="red", bg="black")
+                  fg="red", bg="#0f0f0f")
     stat3_window = canvas.create_window(190, 430, window=stat3)
 
 
@@ -2257,7 +2245,7 @@ def fourthwindow():
     fourthframe = Frame(root)
     fourthframe.pack()
 
-    canvas = Canvas(fourthframe, width=WIDTH, height=HEIGHT, highlightthickness=1, highlightbackground="black")
+    canvas = Canvas(fourthframe, width=WIDTH, height=HEIGHT, highlightthickness=1, highlightbackground="#0f0f0f")
     canvas.pack()
 
     img = ImageTk.PhotoImage(file=".\\assets\\bg4.png")
@@ -2367,19 +2355,19 @@ def fourthwindow():
         chip10_button["image"] = small10
         chip25_button["image"] = small25
 
-    chip20p_button = Button(fourthframe, command=chip20p, image=big20p, borderwidth=0, bg="black", activebackground="black")
+    chip20p_button = Button(fourthframe, command=chip20p, image=big20p, borderwidth=0, bg="#0f0f0f", activebackground="#0f0f0f")
     chip20p_button_window = canvas.create_window(40, 145, window=chip20p_button)
-    chip50p_button = Button(fourthframe, command=chip50p, image=small50p, borderwidth=0, bg="black", activebackground="black")
+    chip50p_button = Button(fourthframe, command=chip50p, image=small50p, borderwidth=0, bg="#0f0f0f", activebackground="#0f0f0f")
     chip50p_button_window = canvas.create_window(90, 145, window=chip50p_button)
-    chip1_button = Button(fourthframe, command=chip1, image=small1, borderwidth=0, bg="black", activebackground="black")
+    chip1_button = Button(fourthframe, command=chip1, image=small1, borderwidth=0, bg="#0f0f0f", activebackground="#0f0f0f")
     chip1_button_window = canvas.create_window(140, 145, window=chip1_button)
-    chip5_button = Button(fourthframe, command=chip5, image=small5, borderwidth=0, bg="black", activebackground="black")
+    chip5_button = Button(fourthframe, command=chip5, image=small5, borderwidth=0, bg="#0f0f0f", activebackground="#0f0f0f")
     chip5_button_window = canvas.create_window(190, 145, window=chip5_button)
-    chip10_button = Button(fourthframe, command=chip10, image=small10, borderwidth=0, bg="black", activebackground="black")
+    chip10_button = Button(fourthframe, command=chip10, image=small10, borderwidth=0, bg="#0f0f0f", activebackground="#0f0f0f")
     chip10_button_button_window = canvas.create_window(240, 145, window=chip10_button)
-    chip25_button = Button(fourthframe, command=chip25, image=small25, borderwidth=0, bg="black", activebackground="black")
+    chip25_button = Button(fourthframe, command=chip25, image=small25, borderwidth=0, bg="#0f0f0f", activebackground="#0f0f0f")
     chip25_button_window = canvas.create_window(290, 145, window=chip25_button)
-    chip100_button = Button(fourthframe, command=chip100, image=small100, borderwidth=0, bg="black", activebackground="black")
+    chip100_button = Button(fourthframe, command=chip100, image=small100, borderwidth=0, bg="#0f0f0f", activebackground="#0f0f0f")
     chip100_button_window = canvas.create_window(340, 145, window=chip100_button)
 
     global chip
@@ -2476,15 +2464,15 @@ def fourthwindow():
             bet0chip["state"] = "disabled"
             bet0_variable.set("0")
 
-    r1 = Button(fourthframe, image=offimage, borderwidth=0, command=r1bet, bg="black", activebackground="black")
+    r1 = Button(fourthframe, image=offimage, borderwidth=0, command=r1bet, bg="#0f0f0f", activebackground="#0f0f0f")
     r1_window = canvas.create_window(300, 327, window=r1)
     if r1 == 1:
         r1["image"] = onimage
 
     s = ttk.Style()
-    s.configure("TMenubutton", background="black", foreground="white", font=("Sansation", 12))
+    s.configure("TMenubutton", background="#0f0f0f", foreground="white", font=("Sansation", 12))
     bet0chip = ttk.OptionMenu(fourthframe, bet0_variable, bet0_variable.get(), "0.2", '0.5', '1', '5', '10', '25', "100")
-    bet0chip["menu"].config(background="black", foreground="white", font=("Sansation", 12))
+    bet0chip["menu"].config(background="#0f0f0f", foreground="white", font=("Sansation", 12))
     bet0chip_window = canvas.create_window(240, 327, window=bet0chip)
 
     if r1value == 0:
@@ -2495,11 +2483,11 @@ def fourthwindow():
         r1['image'] = onimage
         bet0chip["state"] = "normal"
 
-    min_entry = Entry(fourthframe, width=5, textvariable=minmoney, bd=0, background="black", font=("Sansation", 9), fg="white", insertbackground="white")
+    min_entry = Entry(fourthframe, width=5, textvariable=minmoney, bd=0, background="#0f0f0f", font=("Sansation", 9), fg="white", insertbackground="white")
     min_entry_window = canvas.create_window(275, 267, anchor=NW, window=min_entry)
 
 
-    max_entry = Entry(fourthframe, width=5, textvariable=maxmoney, bd=0, background="black", font=("Sansation", 9), fg="white", insertbackground="white")
+    max_entry = Entry(fourthframe, width=5, textvariable=maxmoney, bd=0, background="#0f0f0f", font=("Sansation", 9), fg="white", insertbackground="white")
 
     max_entry_window = canvas.create_window(275, 215, anchor=NW, window=max_entry)
 
@@ -2522,14 +2510,14 @@ def fourthwindow():
 
     global martingale_entry, mart_var
 
-    martingale_entry = Entry(fourthframe, width=3, bd=0, textvariable=mart_var, bg="black", font=("Sansation", 10), fg="white", insertbackground="white")
+    martingale_entry = Entry(fourthframe, width=3, bd=0, textvariable=mart_var, bg="#0f0f0f", font=("Sansation", 10), fg="white", insertbackground="white")
     martingale_entry_window = canvas.create_window(275, 370, anchor=NW, window=martingale_entry)
 
-    valueup = Button(fourthframe, command=mart_up, image=upimage, borderwidth=0, bg="black",
-                    activebackground="black")
+    valueup = Button(fourthframe, command=mart_up, image=upimage, borderwidth=0, bg="#0f0f0f",
+                    activebackground="#0f0f0f")
     valueup_window = canvas.create_window(304, 373, anchor=NW, window=valueup)
-    valuedown = Button(fourthframe, command=mart_down, image=downimage, borderwidth=0, bg="black",
-                    activebackground="black")
+    valuedown = Button(fourthframe, command=mart_down, image=downimage, borderwidth=0, bg="#0f0f0f",
+                    activebackground="#0f0f0f")
     valuedown_window = canvas.create_window(292, 373, anchor=NW, window=valuedown)
 
     def convert():
@@ -2548,15 +2536,15 @@ def fourthwindow():
 
 
 
-    toback = Button(fourthframe, command=thirdwindow, image=backimage, borderwidth=0, bg="black", activebackground="black")
+    toback = Button(fourthframe, command=thirdwindow, image=backimage, borderwidth=0, bg="#0f0f0f", activebackground="#0f0f0f")
     toback_window = canvas.create_window(45, 410, anchor=NW, window=toback)
 
-    toadvance = Button(fourthframe, command=convert, image=nextimage, borderwidth=0, bg="black",
-                       activebackground="black")
+    toadvance = Button(fourthframe, command=convert, image=nextimage, borderwidth=0, bg="#0f0f0f",
+                       activebackground="#0f0f0f")
     toadvance_window = canvas.create_window(220, 410, anchor=NW, window=toadvance)
     global stat4
 
-    stat4 = Label(fourthframe, text="", font=("Sansation", 12, "bold"), fg="red", bg="black")
+    stat4 = Label(fourthframe, text="", font=("Sansation", 12, "bold"), fg="red", bg="#0f0f0f")
     stat4_window = canvas.create_window(190, 470, window=stat4)
 
 
@@ -2570,33 +2558,33 @@ def thirdwindow():
     thirdframe = Frame(root)
     thirdframe.pack()
 
-    canvas = Canvas(thirdframe, width=WIDTH, height=HEIGHT, highlightthickness=1, highlightbackground="black")
+    canvas = Canvas(thirdframe, width=WIDTH, height=HEIGHT, highlightthickness=1, highlightbackground="#0f0f0f")
     canvas.pack()
 
     img = ImageTk.PhotoImage(file=".\\assets\\bg3.png")
     canvas.background = img  # Keep a reference in case this code is put in a function.
     bg = canvas.create_image(0, 0, anchor=NW, image=img)
     s = ttk.Style()
-    s.configure("TMenubutton", background="black", foreground="white", font=("Sansation", 12, "bold"))
+    s.configure("TMenubutton", background="#0f0f0f", foreground="white", font=("Sansation", 12, "bold"))
 
     global coldozwait_variable
 
     coldozwait_entry = ttk.OptionMenu(thirdframe, coldozwait_variable, coldozwait_variable.get(), '4', '5', '6', '7', '8', '9', '10', '11', '12')
-    coldozwait_entry["menu"].config(background="black", foreground="white", font=("Sansation", 12, "bold"))
+    coldozwait_entry["menu"].config(background="#0f0f0f", foreground="white", font=("Sansation", 12, "bold"))
     coldozwait_entry_window = canvas.create_window(280, 178, anchor=NW, window=coldozwait_entry)
 
     outside_label = Label(thirdframe, text="Repetitions:", font=("Sansation", 15, "bold"))
     global outwait_variable
     outwait_entry = ttk.OptionMenu(thirdframe, outwait_variable, outwait_variable.get(), '4', '5', '6', '7', '8', '9', '10', '11',
                                    '12', '13')
-    outwait_entry["menu"].config(background="black", foreground="white", font=("Sansation", 12, "bold"))
+    outwait_entry["menu"].config(background="#0f0f0f", foreground="white", font=("Sansation", 12, "bold"))
     outwait_entry_window = canvas.create_window(280, 232, anchor=NW, window=outwait_entry)
 
     global alternating_variable
 
     alternating_entry = ttk.OptionMenu(thirdframe, alternating_variable, alternating_variable.get(), '4', '5', '6', '7', '8', '9',
                                        '10', '11', '12', '13')
-    alternating_entry["menu"].config(background="black", foreground="white", font=("Sansation", 12, "bold"))
+    alternating_entry["menu"].config(background="#0f0f0f", foreground="white", font=("Sansation", 12, "bold"))
     alternating_entry_window = canvas.create_window(280, 284, anchor=NW, window=alternating_entry)
 
     if gambitvalue == 1:
@@ -2653,11 +2641,11 @@ def thirdwindow():
 
 
 
-    only20ptablelabel = Label(thirdframe, text="Only 50p tables?", borderwidth=0, bg="black", activebackground="black", fg="white", font=("Sansation", 14, "bold"))
+    only20ptablelabel = Label(thirdframe, text="Only 50p tables?", borderwidth=0, bg="#0f0f0f", activebackground="#0f0f0f", fg="white", font=("Sansation", 14, "bold"))
     #only20ptablelabel_window = canvas.create_window(58, 450, anchor=NW, window=only20ptablelabel)
 
-    only20ptablebutton = Button(thirdframe, image=onimage, borderwidth=0, command=change20ptables, bg="black",
-                               activebackground="black")
+    only20ptablebutton = Button(thirdframe, image=onimage, borderwidth=0, command=change20ptables, bg="#0f0f0f",
+                               activebackground="#0f0f0f")
     #only20ptablebutton_window = canvas.create_window(260, 445, anchor=NW, window=only20ptablebutton)
 
     if only20ptable:
@@ -2667,11 +2655,11 @@ def thirdwindow():
         only20ptablebutton["image"] = offimage
         only20ptablelabel["fg"] = "grey"
 
-    toback = Button(thirdframe, command=secondwindow, image=backimage, borderwidth=0, bg="black",
-                    activebackground="black")
+    toback = Button(thirdframe, command=secondwindow, image=backimage, borderwidth=0, bg="#0f0f0f",
+                    activebackground="#0f0f0f")
     toback_window = canvas.create_window(45, 370, anchor=NW, window=toback)
-    toadvance = Button(thirdframe, command=fourthwindow, image=nextimage, borderwidth=0, bg="black",
-                       activebackground="black")
+    toadvance = Button(thirdframe, command=fourthwindow, image=nextimage, borderwidth=0, bg="#0f0f0f",
+                       activebackground="#0f0f0f")
     toadvance_window = canvas.create_window(220, 370, anchor=NW, window=toadvance)
 
 
@@ -2682,7 +2670,7 @@ def secondwindow():
     thirdframe.destroy()
     secondframe = Frame(root)
     secondframe.pack()
-    canvas = Canvas(secondframe, width=WIDTH, height=HEIGHT, highlightthickness=1, highlightbackground="black")
+    canvas = Canvas(secondframe, width=WIDTH, height=HEIGHT, highlightthickness=1, highlightbackground="#0f0f0f")
     canvas.pack()
 
     img = ImageTk.PhotoImage(file=".\\assets\\bg2.png")
@@ -2690,29 +2678,29 @@ def secondwindow():
     bg = canvas.create_image(0, 0, anchor=NW, image=img)
 
     global dozcol_check
-    dozcol_check = Button(secondframe, image=offimage, borderwidth=0, command=dozcolonoff, bg="black",
-                          activebackground="black")
+    dozcol_check = Button(secondframe, image=offimage, borderwidth=0, command=dozcolonoff, bg="#0f0f0f",
+                          activebackground="#0f0f0f")
     dozcol_check_window = canvas.create_window(260, 173, anchor=NW, window=dozcol_check)
     if dozvalue == 1:
         dozcol_check["image"] = onimage
 
     global outside_check
-    outside_check = Button(secondframe, image=offimage, borderwidth=0, command=outsideonoff, bg="black",
-                           activebackground="black")
+    outside_check = Button(secondframe, image=offimage, borderwidth=0, command=outsideonoff, bg="#0f0f0f",
+                           activebackground="#0f0f0f")
     outside_check_window = canvas.create_window(260, 225, anchor=NW, window=outside_check)
     if outsidevalue == 1:
         outside_check["image"] = onimage
 
     global alternating_check
-    alternating_check = Button(secondframe, image=offimage, borderwidth=0, command=alternatingonoff, bg="black",
-                               activebackground="black")
+    alternating_check = Button(secondframe, image=offimage, borderwidth=0, command=alternatingonoff, bg="#0f0f0f",
+                               activebackground="#0f0f0f")
     alternating_check_window = canvas.create_window(260, 276, anchor=NW, window=alternating_check)
     if alternatingvalue == 1:
         alternating_check["image"] = onimage
 
     global gambit_check
-    gambit_check = Button(secondframe, image=offimage, borderwidth=0, command=gambitonoff, bg="black",
-                          activebackground="black")
+    gambit_check = Button(secondframe, image=offimage, borderwidth=0, command=gambitonoff, bg="#0f0f0f",
+                          activebackground="#0f0f0f")
     #gambit_check_window = canvas.create_window(260, 328, anchor=NW, window=gambit_check)
     if gambitvalue == 1:
         gambit_check["image"] = onimage
@@ -2724,12 +2712,12 @@ def secondwindow():
         else:
             thirdwindow()
 
-    toadvance = Button(secondframe, command=check2ndwindows, image=nextimage, borderwidth=0, bg="black",
-                       activebackground="black")
+    toadvance = Button(secondframe, command=check2ndwindows, image=nextimage, borderwidth=0, bg="#0f0f0f",
+                       activebackground="#0f0f0f")
     toadvance_window = canvas.create_window(220, 370, anchor=NW, window=toadvance)
 
     global stat2
-    stat2 = Label(secondframe, text="", font=("Sansation", 12, "bold"), fg="red", bg="black")
+    stat2 = Label(secondframe, text="", font=("Sansation", 12, "bold"), fg="red", bg="#0f0f0f")
     stat2_window = canvas.create_window(190, 430, window=stat2)
 
 
@@ -2765,7 +2753,7 @@ def mainwindows():
     failpassword_label_window = canvas.create_window(190, 430, window=failpassword_label)
 
 
-title_bar = Frame(root, relief="raised", borderwidth=0, highlightbackground="black", highlightthickness=2, background="black")
+title_bar = Frame(root, relief="raised", borderwidth=0, highlightbackground="#0f0f0f", highlightthickness=2, background="#0f0f0f")
 title_bar.pack(fill=X)
 title_bar.bind("<B1-Motion>", move_app)
 
@@ -2782,13 +2770,13 @@ def close_leave(e):
 
 
 global close_label
-close_label = Button(title_bar, text="X", fg="white", bg="black", font=("Sansation", 12, "bold"), bd=0, command=quitter)
+close_label = Button(title_bar, text="X", fg="white", bg="#0f0f0f", font=("Sansation", 12, "bold"), bd=0, command=quitter)
 close_label.pack(side=RIGHT, padx=5, pady=0)
 close_label.bind("<Enter>", close_hover)
 close_label.bind("<Leave>", close_leave)
 
 
-title_label = Label(title_bar, image=logo, bg="black", font=("Sansation", 12, "bold"))
+title_label = Label(title_bar, image=logo, bg="#0f0f0f", font=("Sansation", 12, "bold"))
 title_label.pack(side=LEFT)
 
 if __name__ == "__main__":
