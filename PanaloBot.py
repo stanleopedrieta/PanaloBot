@@ -1092,17 +1092,17 @@ def betting():
         blackcount = out_wait - 1
     if redcount >= out_wait:
         redcount = out_wait - 1
-    if smallbigcount > alt_wait:
+    if smallbigcount >= alt_wait:
         smallbigcount = alt_wait - 1
-    if bigsmallcount > alt_wait:
+    if bigsmallcount >= alt_wait:
         bigsmallcount = alt_wait - 1
-    if oddevencount > alt_wait:
+    if oddevencount >= alt_wait:
         oddevencount = alt_wait - 1
-    if evenoddcount > alt_wait:
+    if evenoddcount >= alt_wait:
         evenoddcount = alt_wait - 1
-    if blackredcount > alt_wait:
+    if blackredcount >= alt_wait:
         blackredcount = alt_wait - 1
-    if redblackcount > alt_wait:
+    if redblackcount >= alt_wait:
         redblackcount = alt_wait - 1
     if firstdozcount >= col_wait:
         firstdozcount = col_wait - 1
